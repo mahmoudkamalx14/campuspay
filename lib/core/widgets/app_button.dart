@@ -21,7 +21,7 @@ class AppTextButton extends StatelessWidget {
     this.buttonColor = ColorsManager.mainBlue,
     this.textColor = Colors.white,
     this.borderRadius = 12,
-    this.elevation = 10,
+    this.elevation = 0,
     this.shadowSpread = 5,
     this.shadowColor = Colors.grey,
   });
@@ -33,12 +33,10 @@ class AppTextButton extends StatelessWidget {
       child: SizedBox(
         width: double.infinity.w, // Make the button take up full width
         height: 60.h,
-        child: ElevatedButton(
+        child: TextButton(
           onPressed: onPressed,
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all(buttonColor),
-            // backgroundColor: MaterialStateProperty.all(
-            //     buttonColor ?? Theme.of(context).primaryColorDark),
             shape: MaterialStateProperty.all(
               RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(borderRadius),
@@ -75,16 +73,17 @@ class MyButten extends StatelessWidget {
         padding: const EdgeInsets.all(23),
         margin: const EdgeInsets.symmetric(horizontal: 25),
         decoration: BoxDecoration(
-            color: ColorsManager.mainBlue,
-            borderRadius: BorderRadius.circular(8),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.shade500,
-                blurRadius: 10,
-                spreadRadius: 5,
-                offset: const Offset(-2, 2),
-              ),
-            ]),
+          color: ColorsManager.mainBlue,
+          borderRadius: BorderRadius.circular(8),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.shade500,
+              blurRadius: 10,
+              spreadRadius: 5,
+              offset: const Offset(-2, 2),
+            ),
+          ],
+        ),
         child: Center(
           child: Text(
             text,

@@ -22,7 +22,7 @@ class _ApiService implements ApiService {
 
   @override
   Future<LoginResponse> login(LoginRequestBody loginRequestBody) async {
-    const _extra = <String, dynamic>{};
+    final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
@@ -49,12 +49,12 @@ class _ApiService implements ApiService {
   }
 
   @override
-  Future<SignupResponse> signup(SignupRequestBody signupRequestBody) async {
-    const _extra = <String, dynamic>{};
+  Future<SignupResponse> signup(SignupRequestBody loginRequestBody) async {
+    final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    _data.addAll(signupRequestBody.toJson());
+    _data.addAll(loginRequestBody.toJson());
     final _result = await _dio
         .fetch<Map<String, dynamic>>(_setStreamType<SignupResponse>(Options(
       method: 'POST',
@@ -63,7 +63,7 @@ class _ApiService implements ApiService {
     )
             .compose(
               _dio.options,
-              'auth/register',
+              'auth/login',
               queryParameters: queryParameters,
               data: _data,
             )

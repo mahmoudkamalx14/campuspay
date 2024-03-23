@@ -7,7 +7,9 @@ import '../theme/colors.dart';
 class AppTextFormField extends StatelessWidget {
   final String hintText;
   final Widget? suffixIcon;
+
   final Widget? prefixIcon;
+  final Widget? prefix;
   final bool? isObscureText;
   final EdgeInsetsGeometry? contentPadding;
   final InputBorder? focusedBorder;
@@ -34,6 +36,7 @@ class AppTextFormField extends StatelessWidget {
     required this.textInputType,
     this.controller,
     required this.validator,
+    this.prefix,
   });
 
   @override
@@ -61,7 +64,7 @@ class AppTextFormField extends StatelessWidget {
         enabledBorder: enabledBorder ??
             OutlineInputBorder(
               borderSide: const BorderSide(
-                color: Colors.white,
+                color: Colors.grey,
                 width: 1.3,
               ),
               borderRadius: BorderRadius.circular(5),
@@ -81,10 +84,11 @@ class AppTextFormField extends StatelessWidget {
           borderRadius: BorderRadius.circular(5),
         ),
         hintText: hintText,
-        hintStyle: TextStyle(
-            fontFamily: "Roboto Slab",
-            fontSize: 14.sp,
-            fontWeight: FontWeight.bold),
+        hintStyle: hintTextStyle ??
+            TextStyle(
+                fontFamily: "Roboto Slab",
+                fontSize: 14.sp,
+                fontWeight: FontWeight.w300),
         suffixIcon: suffixIcon,
         prefixIcon: prefixIcon,
         fillColor: backGroundColorHint ?? ColorsManager.moreLightGray,

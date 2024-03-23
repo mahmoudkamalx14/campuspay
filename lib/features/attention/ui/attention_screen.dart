@@ -1,12 +1,11 @@
 // ignore_for_file: file_names
 
+import 'package:campuspay/features/attention/ui/widget/text1_2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:campuspay/core/helpers/extentions.dart';
 import 'package:campuspay/core/theme/colors.dart';
-import 'package:campuspay/features/attention/widget/text1_2.dart';
-
 
 import '../../../core/routes/routes.dart';
 import '../../../core/widgets/app_button.dart';
@@ -53,7 +52,7 @@ class AttentionScreen extends StatelessWidget {
               AppTextButton(
                 text: "Start",
                 onPressed: () {
-                  context.navigateTo(Routes.loginScreen);
+                  context.navigateToReplacement(Routes.loginScreen);
                 },
                 textColor: Colors.white,
               ),

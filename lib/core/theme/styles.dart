@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'colors.dart';
 import 'font_weight_helper.dart';
+
 class TextStyles {
   static TextStyle font24BlackBold = TextStyle(
     fontSize: 24.sp,
@@ -91,5 +92,29 @@ class TextStyles {
     fontSize: 15.sp,
     fontWeight: FontWeightHelper.medium,
     color: ColorsManager.darkBlue,
+  );
+
+  static TextStyle font14DarkGrayMedium = TextStyle(
+    color: const Color(0xFF9CA3AF),
+    fontSize: 14.sp,
+    fontFamily: 'Alexandria',
+    fontWeight: FontWeight.w500,
+    height: 0.10,
+  );
+
+  static TextStyle font16Color827Medium = TextStyle(
+    color: const Color(0xFF111827),
+    fontSize: 16.sp,
+    fontFamily: 'Alexandria',
+    fontWeight: FontWeight.w500,
+    height: 0.09,
+  );
+
+  static TextStyle font12Color3AFRegular = TextStyle(
+    color: const Color(0xFF9CA3AF),
+    fontSize: 12.sp,
+    fontFamily: 'Alexandria',
+    fontWeight: FontWeight.w400,
+    height: 0.11,
   );
 }

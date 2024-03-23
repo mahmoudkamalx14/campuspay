@@ -21,15 +21,7 @@ class Campuspay extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         initialRoute: Routes.myCustomSplashScreen,
         onGenerateRoute: appRouter.generateRoute,
-        // routes: {
-        //   //MyCustomSplashScreen.id: (context) => const MyCustomSplashScreen(),
-        //   // OnboardingPage1.id: (context) => const OnboardingPage1(),
-        //   // OnboardingPage2.id: (context) => const OnboardingPage2(),
-        //   // AttentionPage.id: (context) => const AttentionPage(),
-        //   // LogInPage.id: (context) => const LogInPage(),
-        //   // RegisterPage.id: (context) => const RegisterPage(),
-        //   // HomePage.id: (context) => const HomePage(),
-        // },
+        theme: ThemeData(useMaterial3: false),
       ),
     );
   }

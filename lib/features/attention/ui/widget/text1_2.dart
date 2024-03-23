@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/theme/colors.dart';
+import '../../../../core/theme/colors.dart';
 
 class AttentionText extends StatelessWidget {
   const AttentionText({super.key});

@@ -12,7 +12,7 @@ part of 'sign_up_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$SignupState<T> {
@@ -113,8 +113,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   }
 
   @override
-  // ignore: non_nullable_equals_parameter
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType && other is _$InitialImpl<T>);
   }
@@ -228,8 +227,7 @@ class _$SignupLoadingImpl<T> implements SignupLoading<T> {
   }
 
   @override
-  // ignore: non_nullable_equals_parameter
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType && other is _$SignupLoadingImpl<T>);
   }
@@ -361,8 +359,7 @@ class _$SignupSuccessImpl<T> implements SignupSuccess<T> {
   }
 
   @override
-  // ignore: non_nullable_equals_parameter
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SignupSuccessImpl<T> &&
@@ -509,8 +506,7 @@ class _$SignupErrorImpl<T> implements SignupError<T> {
   }
 
   @override
-  // ignore: non_nullable_equals_parameter
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SignupErrorImpl<T> &&

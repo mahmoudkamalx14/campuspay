@@ -51,7 +51,7 @@ class LoginScreen extends StatelessWidget {
                         text: "Login",
                         onPressed: () {
                           //validateThenDoLogin(context);
-                          context.navigateToReplacement(Routes.homeScreen);
+                          context.navigateToReplacement(Routes.bottomNavBar);
                         },
                       ),
                       verticalSpace(14),
